@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function About() {
   return (
     <Wrapper>
-      <h2></h2>
+      <h2>hello</h2>
     </Wrapper>
   );
 }

@@ -12,7 +12,6 @@ export default function App() {
           <Route component={About} path="/about" />
           <Route component={Home} path="/" />
         </Switch>
-        <h1>hello world</h1>
       </Layout>
     </Router>
   );

@@ -11,7 +11,7 @@ body {
     button{
         font-family: 'Architects Daughter', cursive;
         border-radius: 20px;
-        margin-right 20px;
+        margin-right: 20px;
         padding : 12px 20px;
         background-color: ${(props) => props.theme.backgroundColor};
         color: ${(props) => props.theme.mainColor};

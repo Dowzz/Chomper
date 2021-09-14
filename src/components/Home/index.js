@@ -9,32 +9,39 @@ export default function Home() {
   return (
     <Wrapper>
       <Grid>
-        {buttonsList.map(({ soundPlay, isPlayed }, index) => {
-          return (
-            <GridButton
-              key={index}
-              soundPlay={soundPlay}
-              isPlayed={isPlayed}
-            ></GridButton>
-          );
-        })}
+        {buttonsList.map(
+          ({ soundPlay, isPlayed, id, handleSampleChange }, index) => {
+            return (
+              <GridButton
+                key={index}
+                soundPlay={soundPlay}
+                isPlayed={isPlayed}
+                id={id}
+                handleSampleChange={handleSampleChange}
+              ></GridButton>
+            );
+          }
+        )}
       </Grid>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-item: center;
+`;
 
 const Grid = styled.div`
   border-radius: 20px;
   display: grid;
   width: 400px;
   height: 400px;
-  border: solid 1px;
   grid-template-columns: 1fr 1fr;
   column-gap: 12px;
   row-gap: 12px;
-  padding: 24px;
+
   margin: auto;
 
   @media (max-width: 640px) {

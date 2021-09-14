@@ -14,9 +14,6 @@ export default function Header({ isLight, handleToggleTheme }) {
           <MenuEL isCurrentPage={location.pathname === "/about"}>About</MenuEL>
         </Link>
       </nav>
-      <button onClick={handleToggleTheme}>
-        Switch to {isLight ? "dark" : "light"} theme
-      </button>
     </Wrapper>
   );
 }
@@ -27,17 +24,18 @@ const Wrapper = styled.header`
   justify-content: space-between;
   padding: 0px 24px;
   align-items: center;
-  border-bottom: solid 1px;
+
   & a {
     text-decoration: none;
     color: inherit;
   }
   & a:first-child {
-    margin-right: 12px;
+    margin-right: 16px;
   }
 `;
 
 const MenuEL = styled.p`
+  font-size: 18px;
   padding-bottom: 2px;
   border-bottom: inset 2px
     ${(props) => (props.isCurrentPage ? "" : "transparent")};
